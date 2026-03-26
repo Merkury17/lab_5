@@ -1,0 +1,451 @@
+/* =========================================
+   БАЗОВІ НАЛАШТУВАННЯ (Reset & Box Model)
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #111;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* =========================================
+   ШАПКА (Flexbox)
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 5rem;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    width: 50%;
+}
+
+header nav {
+    width: 40%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+header nav a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #111;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #111;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* =========================================
+   ОСНОВНИЙ КОНТЕНТ (CSS Grid Layout)
+   ========================================= */
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.left-column>section:first-child>h2,
+.right-column>section:first-child>h2 {
+    margin-top: 0;
+}
+
+.resume-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.icon-wrapper {
+    background-color: #111;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.resume-item .content {
+    font-size: 0.95rem;
+}
+
+.resume-item strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+ul.cert-list {
+    margin-top: 5px;
+}
+
+/* =========================================
+   СТИЛІЗАЦІЯ СЕКЦІЙ ТА ТЕКСТУ
+   ========================================= */
+h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#contacts,
+#skills,
+#comments-section {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+}
+
+#feedback {
+    margin-top: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+li strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   ФОРМА (Селектори атрибутів)
+   ========================================= */
+form {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* =========================================
+   МОДАЛЬНЕ ВІКНО 
+   ========================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =========================================
+   КОМЕНТАРІ (API)
+   ========================================= */
+.comments-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px 60px;
+    align-items: start;
+}
+
+.comment-card {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 20px 15px;
+    border-radius: 0;
+    width: 100%;
+}
+
+.comment-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.comment-card a {
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.comment-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.loading {
+    color: #666;
+    font-style: italic;
+}
+
+/* =========================================
+   ТЕМНА ТЕМА
+   ========================================= */
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] #contacts,
+[data-theme="dark"] #skills,
+[data-theme="dark"] #feedback,
+[data-theme="dark"] footer,
+[data-theme="dark"] #comments-section {
+    border-color: #444;
+}
+
+[data-theme="dark"] header nav a,
+[data-theme="dark"] .theme-switch-wrapper {
+    color: #bbb;
+}
+
+[data-theme="dark"] header nav a:hover {
+    color: #fff;
+}
+
+[data-theme="dark"] form,
+[data-theme="dark"] .comment-card,
+[data-theme="dark"] .modal-content {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+[data-theme="dark"] .comment-card h3 {
+    color: #fff;
+}
+
+[data-theme="dark"] .comment-card a {
+    color: #bbb;
+}
+
+[data-theme="dark"] .comment-card p {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] textarea {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+[data-theme="dark"] button[type="submit"] {
+    background-color: #444;
+}
+
+[data-theme="dark"] button[type="submit"]:hover {
+    background-color: #666;
+}
+
+[data-theme="dark"] .icon-wrapper {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+[data-theme="dark"] input:checked+.slider {
+    background-color: #e0e0e0;
+}
+
+[data-theme="dark"] input:checked+.slider:before {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .close-btn {
+    color: #bbb;
+}
+
+[data-theme="dark"] .close-btn:hover {
+    color: #fff;
+}

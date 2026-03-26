@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Юхимчук Назар</title>
+    <meta name="description" content="CV студента спеціальності Кібербезпека">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Юхимчук Назар</h1>
+        <nav>
+            <a href="#about">Про мене</a>
+            <a href="#education">Освіта</a>
+            <a href="#skills">Навички</a>
+            <a href="#contacts">Контакти</a>
+            <a href="#feedback">Зворотній зв'язок</a>
+            <a href="#comments-section">Коментарі</a>
+            <div class="theme-switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Денний режим</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="left-column">
+            <section id="about">
+                <h2>Про мене</h2>
+                <p>Привіт! Я Назар Юхимчук, студент 2-го курсу спеціальності «Кібербезпека» в НУ «Львівська
+                    політехніка».
+                    Маю розвинені аналітичні навички та увагу до деталей. Організований, орієнтований на результат, маю
+                    високий рівень ініціативності та відповідальності. Вмію і люблю працювати в динамічному командному
+                    середовищі. Моя мета — розпочати кар'єру в сфері кібербезпеки. У вільний час захоплююсь футболом та
+                    боксом.</p>
+            </section>
+
+            <section id="contacts">
+                <h2>Контакти</h2>
+                <ul>
+                    <li>Email: <a href="mailto:nazar.yukhymchuk.kb.2024@lpnu.ua">nazar.yukhymchuk.kb.2024@lpnu.ua</a>
+                    </li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/назар-юхимчук-b565a03b0" target="_blank">Назар
+                            Юхимчук</a></li>
+                    <li>GitHub: <a href="https://github.com/Merkury17" target="_blank">Merkury17</a></li>
+                </ul>
+
+                <h3 id="feedback">Форма зворотного зв'язку</h3>
+                <form method="POST" action="https://formspree.io/f/xwvrjewb">
+                    <label for="name">Ім'я:</label><br>
+                    <input type="text" id="name" name="name" required placeholder="Ваше ім'я"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="Ваш email"><br><br>
+
+                    <label for="phone">Номер телефону:</label><br>
+                    <input type="tel" id="phone" name="phone" required placeholder="Ваш телефон"><br><br>
+
+                    <label for="message">Повідомлення:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" required
+                        placeholder="Ваше повідомлення..."></textarea><br><br>
+
+                    <button type="submit">Відправити</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section id="education">
+                <h2>Освіта</h2>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="content">
+                        <strong>Національний університет «Львівська політехніка»</strong>
+                        Спеціальність «Кібербезпека» (2 курс).
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="content">
+                        <strong>Сертифікати та курси:</strong>
+                        <ul class="cert-list">
+                            <li>
+                                AWS Academy Graduate - Cloud Foundations.<br>
+                                <img src="aws-academy-graduate-cloud-foundations-training-bad.png"
+                                    alt="AWS Academy Graduate Badge" width="100">
+                            </li>
+                            <li>
+                                Cisco Networking Academy: CCNA - Introduction to Networks.<br>
+                                <img src="ccna-introduction-to-networks.png" alt="Cisco CCNA Badge" width="100">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Навички</h2>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="content">
+                        <strong>Мережеві технології:</strong>
+                        TCP/IP, HTTP/S, DNS, VPN (розуміння роботи та методів захисту).
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="content">
+                        <strong>Інформаційна безпека:</strong>
+                        Знання ISO 27001, стандартів ІБ, популярних вразливостей, криптографічних протоколів та методів
+                        шифрування.
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="content">
+                        <strong>Операційні системи:</strong>
+                        Windows, Linux (базові навички).
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                    <div class="content">
+                        <strong>Інструменти та мови:</strong>
+                        Python, HTML, Git.
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-comments"></i></div>
+                    <div class="content">
+                        <strong>Мови:</strong>
+                        Англійська (B1 - добрі навички письмового та усного спілкування).
+                    </div>
+                </div>
+                <div class="resume-item">
+                    <div class="icon-wrapper"><i class="fa-solid fa-users"></i></div>
+                    <div class="content">
+                        <strong>Soft skills:</strong>
+                        Комунікабельність, робота в команді, аналітичне мислення.
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="comments-section" style="margin-top: 60px;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Коментарі</h2>
+        <div id="comments-container" class="comments-grid">
+            <p class="loading">Завантаження коментарів...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Юхимчук Назар</p>
+        <p id="os-info"></p>
+        <p id="browser-info"></p>
+    </footer>
+
+    <!-- Модальне вікно -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h3 style="margin-bottom: 20px;">Залиште свій відгук</h3>
+            <form action="https://formspree.io/f/xwvrjewb" method="POST" style="margin-top: 0;">
+                <label for="modal-name">Ім'я:</label><br>
+                <input type="text" id="modal-name" name="name" required placeholder="Ваше ім'я"><br><br>
+
+                <label for="modal-email">Email:</label><br>
+                <input type="email" id="modal-email" name="email" required placeholder="Ваш email"><br><br>
+
+                <label for="modal-phone">Номер телефону:</label><br>
+                <input type="tel" id="modal-phone" name="phone" required placeholder="Ваш телефон"><br><br>
+
+                <label for="modal-message">Повідомлення:</label><br>
+                <textarea id="modal-message" name="message" rows="4" cols="40" required placeholder="Ваше повідомлення..."></textarea><br><br>
+
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
